@@ -44,3 +44,16 @@
 ```sh
 git clone https://github.com/YaseenBepari/Namma-Agri-crop_yield_prediction-.git
 cd Crop_Yield_Prediction-Namma-Agri
+
+pip install -r requirements.txt   # For Python backend  
+npm install                        # If using React frontend  
+
+python app.py    # Start the Flask/Django backend  
+npm start        # Start the React frontend  
+4️⃣ Usage
+🌱 Input: Enter details such as soil type, rainfall, temperature, and location
+📊 Prediction: Get AI-based crop yield estimates
+📈 Visualization: View interactive graphs & insights for better decision-making
+
+🤝 Contributing
+We ❤️ open-source! Want to contribute? Follow these steps:
