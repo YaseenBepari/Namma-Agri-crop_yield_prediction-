@@ -41,10 +41,9 @@
 💻 **Follow these steps to set up and run the project on your system:**  
 
 ### 1️⃣ **Clone the Repository**  
-```sh
+
 git clone https://github.com/YaseenBepari/Namma-Agri-crop_yield_prediction-.git
 cd Crop_Yield_Prediction-Namma-Agri
-
 pip install -r requirements.txt   # For Python backend  
 npm install                        # If using React frontend  
 
@@ -57,3 +56,11 @@ npm start        # Start the React frontend
 
 🤝 Contributing
 We ❤️ open-source! Want to contribute? Follow these steps:
+⭐ Support & Feedback
+If you find this project useful, please 🌟 star the repo to show your support!
+
+🔗 Follow & Connect:
+💼 LinkedIn
+📧 Email: yaseenbepari2002@gmail.com
+
+🚀 Let's make agriculture smarter, together! 🌱
