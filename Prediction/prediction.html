@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crop Prediction</title>
+    <link rel="stylesheet" href="prediction.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">Namma Agri</div>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="/HOME/home.html">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="/Sign_in_or_up/sign_in.html">SignIn</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="form-container">
+        <h1>Crop Prediction</h1>
+        <form id="cropPredictionForm">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-group">
+                <label for="soil">Soil Type:</label>
+                <select id="soil" name="soil" required>
+                    <option value="">--Select Soil Type--</option>
+                    <option value="red soil">Red Soil</option>
+                    <option value="black soil">Black Soil</option>
+                    <option value="loamy soil">Loamy Soil</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="state">State:</label>
+                <select id="state" name="state" required>
+                    <option value="">--Select State--</option>
+                    <option value="karnataka">Karnataka</option>
+                    <option value="tamilnadu">Tamil Nadu</option>
+                    <option value="maharashtra">Maharashtra</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="weather">Weather Condition:</label>
+                <select id="weather" name="weather" required>
+                    <option value="">--Select Weather--</option>
+                    <option value="sunny">Sunny</option>
+                    <option value="rainy">Rainy</option>
+                    <option value="cloudy">Cloudy</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="landArea">Total Land Area (in acres):</label>
+                <input type="number" id="landArea" name="landArea" placeholder="Enter land area" required>
+            </div>
+
+            <button type="submit">Predict Crop</button>
+        </form>
+
+        <div class="result-container" id="resultContainer" style="display: none;">
+            <h2>Prediction Result</h2>
+            <p id="predictedCrop">Predicted Crop: </p>
+            <p id="successRate">Success Rate: </p>
+            <button id="knowMoreButton">Know More</button>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-container">
+            <p>&copy; Copyright by Innovative Thinkers</p>
+            <p>Since 2021</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('cropPredictionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.toLowerCase();
+            const soil = document.getElementById('soil').value;
+            const state = document.getElementById('state').value;
+            const weather = document.getElementById('weather').value;
+
+            let predictedCrop = "";
+            let successRate = "";
+
+            // Conditions for crop prediction based on your requirements
+            if (soil === "black soil" && (state === "karnataka" || state === "tamilnadu" || state === "maharashtra") && weather === "sunny") {
+                predictedCrop = "Maize";
+                successRate = "75%";
+            } else if (soil === "red soil" && (state === "karnataka" || state === "tamilnadu") && (weather === "sunny" ||weather === "rainy")) {
+                predictedCrop = "Groundnut";
+                successRate = "89%";
+            } else if (soil === "black soil" && state === "karnataka" && (weather === "sunny" ||weather === "rainy")) {
+                predictedCrop = "Jowar";
+                successRate = "76%";
+            } else if (soil === "black soil" && state === "karnataka" && (weather === "sunny" || weather === "cloudy")) {
+                predictedCrop = "Chili";
+                successRate = "80%";
+            } else if (soil === "black soil" && (state === "karnataka" || state === "tamilnadu" || state === "maharashtra") && weather === "sunny") {
+                predictedCrop = "Cotton";
+                successRate = "90%";
+            } else {
+                predictedCrop = "No suitable crop found";
+                successRate = "N/A";
+            }
+
+            // Display the result
+            document.getElementById('resultContainer').style.display = 'block';
+            document.getElementById('predictedCrop').innerText = `Predicted Crop: ${predictedCrop}`;
+            document.getElementById('successRate').innerText = `Success Rate: ${successRate}`;
+
+            // Store the predicted data in local storage
+            localStorage.setItem('predictedCrop', predictedCrop);
+            localStorage.setItem('successRate', successRate);
+        });
+
+        document.getElementById('knowMoreButton').addEventListener('click', function() {
+            // Redirect to the "Know More" page
+            window.location.href = 'knowmore.html';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+Soil Type,Weather,State,Total Land (Acres),Crop Name,Crop Yield (%)
+Chalky,Dry,Tamil Nadu,51,Peas,72.26
+Loamy,Rainy,Haryana,68,Soybean,48.33
+Loamy,Humid,West Bengal,61,Rice,57.59
+Sandy,Rainy,Karnataka,54,Tomato,90.14
+Peat,Humid,Bihar,76,Onion,48.59
+Clay,Humid,Haryana,59,Barley,53.81
+Peat,Humid,Uttar Pradesh,78,Onion,74.49
+Peat,Humid,Uttar Pradesh,94,Onion,96.43
+Peat,Rainy,West Bengal,16,Cabbage,44.2
+Silty,Sunny,Haryana,23,Wheat,92.21
+Chalky,Dry,Rajasthan,98,Peas,59.74
+Loamy,Sunny,Bihar,10,Corn,52.72
+Peat,Dry,Gujarat,68,Cabbage,66.83
+Silty,Dry,Gujarat,26,Oats,65.49
+Sandy,Humid,Gujarat,33,Watermelon,75.4
+Clay,Humid,Uttar Pradesh,95,Barley,96.71
+Peat,Dry,West Bengal,86,Potato,62.41
+Chalky,Dry,Haryana,35,Peas,59.21
+Chalky,Dry,West Bengal,50,Cabbage,70.94
+Loamy,Sunny,Gujarat,12,Corn,46.02
+Sandy,Cloudy,Punjab,45,Watermelon,52.22
+Loamy,Cloudy,Maharashtra,53,Rice,95.71
+Chalky,Dry,Karnataka,53,Lavender,63.0
+Clay,Humid,Punjab,64,Rice,86.16
+Silty,Sunny,Punjab,12,Wheat,62.58

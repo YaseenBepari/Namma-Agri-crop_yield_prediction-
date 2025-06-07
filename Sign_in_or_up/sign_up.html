@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="signin_up.css">
+    
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo">Namma Agri</div>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="/HOME/home.html">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="sign_in.html">Sign In</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Sign-Up Form -->
+    <div class="signin-container">
+        <div class="form-container">
+            <h2>Sign Up</h2>
+            <form id="signup-form">
+                <input type="text" placeholder="Username" required><br>
+                
+                <input type="tel" placeholder="Phone Number" required><br>
+                <input type="password" placeholder="password" required><br>
+                <button type="button" onclick="handleSignUp()">Sign Up</button>
+            </form>
+            <p>Already have an account? <a href="sign_in.html">Sign In</a></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; Copyright by Innovative Thinkers</p>
+            <p>Since 2021</p>
+        </div>
+    </footer>
+
+    <script>
+        async function handleSignUp() {
+            const username = document.querySelector('input[type="text"]').value;
+            const phone = document.querySelector('input[type="tel"]').value;
+            const password = document.querySelector('input[type="password"]').value;
+
+            // Handle sign-up logic (e.g., API call)
+            alert('Sign-Up successful!'); // Example
+            window.location.href = '/Sign_in_or_up/sign_in.html'; // Redirect after sign-up
+        }
+    </script>
+</body>
+</html>

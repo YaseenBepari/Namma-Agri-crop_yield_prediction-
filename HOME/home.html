@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namma Agri</title>
+    <link rel="stylesheet" href="home.css">
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({
+                pageLanguage: 'en',
+                includedLanguages: 'en,kn',  // Include Kannada language (kn)
+                layout: google.translate.TranslateElement.InlineLayout.SIMPLE
+            }, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+</head>
+<body>
+    <!-- Language Dropdown -->
+    <div id="google_translate_element"></div>
+
+    <!-- Header Section -->
+    <header>
+        <div class="header-container">
+            <div class="logo">Namma Agri</div>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="/Sign_in_or_up/sign_in.html">SignIn</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Home Section -->
+    <section class="home">
+        <!-- Image Gallery -->
+        <div class="gallery">
+            <button class="gallery-btn left" onclick="prevImage()">&#9664;</button>
+            <div class="gallery-wrapper">
+                <img id="gallery-image" src="images/" alt="Crop 1">
+                <p id="gallery-caption">Wheat - Success Rate: 85% in 2019</p>
+            </div>
+            <button class="gallery-btn right" onclick="nextImage()">&#9654;</button>
+        </div>
+
+        <!-- Vision Section -->
+        <div class="vision">
+            <p>Our vision is to empower farmers with predictive insights, improving agricultural outcomes and ensuring sustainable practices.
+                Our goal is to drive innovation in agriculture by leveraging AI and data analytics to enhance productivity.
+                We aim to foster a future where farmers thrive through smarter decision-making and sustainable farming practices
+            </p>
+            <button onclick="window.location.href='/Prediction/prediction.html'">Predict Now</button>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about" id="about">
+        <br>
+        <h1>About us</h1>
+        <div class="about-container">
+            <div class="about-image">
+                <img src="images/about.jpg" alt="About Us">
+            </div>
+            <div class="about-text">
+                <p>Namma Agri is dedicated to supporting farmers by providing accurate crop yield predictions based on advanced AI technologies.
+                     Our mission is to revolutionize agriculture with data-driven insights.Namma Agri is a comprehensive web application dedicated to empowering farmers and agricultural enthusiasts. 
+                     Our mission is to bridge the gap between technology and agriculture, providing essential tools and resources to help farmers make informed decisions.
+                      Through innovative solutions, Namma Agri offers a platform that provides real-time weather updates, crop suggestions, market trends, and expert advice, all aimed at improving farm productivity and sustainability. Our goal is to enhance the livelihoods of farmers by helping them stay ahead in a rapidly evolving agricultural landscape.
+                    </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feedback Section -->
+    <section class="feedback" id="feedback">
+        <h2 class="feedback-title">Testimonials</h2>
+        <div class="feedback-container">
+            <div class="feedback-item">
+                <img src="images/user1.jpeg" alt="User 1">
+                <p class="username">User 1</p>
+                <p class="opinion">"This tool has been a game-changer for my farming decisions!"</p>
+            </div>
+            <div class="feedback-item">
+                <img src="images/user2.jpeg" alt="User 2">
+                <p class="username">User 2</p>
+                <p class="opinion">"Accurate and easy to use. Highly recommend!"</p>
+            </div>
+            <div class="feedback-item">
+                <img src="images/user3.jpeg" alt="User 3">
+                <p class="username">User 3</p>
+                <p class="opinion">"Helped me choose the best crops for the season."</p>
+            </div>
+            <div class="feedback-item">
+                <img src="images/user4.jpg" alt="User 4">
+                <p class="username">User 4</p>
+                <p class="opinion">"Reliable and insightful predictions every time."</p>
+            </div><div class="feedback-item">
+                <img src="images/user1.jpeg" alt="User 1">
+                <p class="username">User 5</p>
+                <p class="opinion">"This tool has been a game-changer for my farming decisions!"</p>
+            </div>
+            <div class="feedback-item">
+                <img src="images/user2.jpeg" alt="User 2">
+                <p class="username">User 6</p>
+                <p class="opinion">"Accurate and easy to use. Highly recommend!"</p>
+            </div>
+            <div class="feedback-item">
+                <img src="images/user3.jpeg" alt="User 3">
+                <p class="username">User 7</p>
+                <p class="opinion">"Helped me choose the best crops for the season."</p>
+            </div>
+            <div class="feedback-item">
+                <img src="images/user4.jpg" alt="User 4">
+                <p class="username">User 8</p>
+                <p class="opinion">"Reliable and insightful predictions every time."</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section class="contact" id="contact">
+        <h2>Contact Us</h2>
+        <div class="contact-info">
+            <p>Location: Namma Agri Office, Bengaluru</p>
+            <p>Phone: +91 12345 67890</p>
+            <p>Email: contact@nammaagri.com</p>
+            <div class="social-icons">
+                <a href="https://instagram.com" target="_blank"><img src="images/insta.jpg" alt="Instagram"></a>
+                <a href="https://x.com" target="_blank"><img src="images/x.png" alt="Twitter"></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; Copyright by Innovative Thinkers</p>
+            <p>Since 2021</p>
+        </div>
+    </footer>
+
+    <script>
+        const images = [
+            { src: "images/crop3.jpg", caption: 'Wheat - Success Rate: 85% in 2020' },
+            { src: 'images/crop1.jpg', caption: 'Rice - Success Rate: 78% in 2021' },
+            { src: 'images/crop2.jpg', caption: 'Maize - Success Rate: 90% in 2019' }
+        ];
+
+        let currentImageIndex = 0;
+
+        function updateGallery() {
+            const galleryImage = document.getElementById('gallery-image');
+            const galleryCaption = document.getElementById('gallery-caption');
+            galleryImage.src = images[currentImageIndex].src;
+            galleryCaption.textContent = images[currentImageIndex].caption;
+        }
+
+        function prevImage() {
+            currentImageIndex = (currentImageIndex === 0) ? images.length - 1 : currentImageIndex - 1;
+            updateGallery();
+        }
+
+        function nextImage() {
+            currentImageIndex = (currentImageIndex === images.length - 1) ? 0 : currentImageIndex + 1;
+            updateGallery();
+        }
+
+        document.addEventListener('DOMContentLoaded', updateGallery);
+    </script>
+</body>
+</html>

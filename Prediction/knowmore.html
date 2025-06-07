@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Know More</title>
+    <link rel="stylesheet" href="knowmore.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <div class="logo">Namma Agri</div>
+            <nav>
+                <ul class="navbar">
+                    <li><a href="/HOME/home.html">Home</a></li>
+                    <li><a href="#about">About Us</a></li>
+                    <li><a href="/Sign_in_or_up/sign_in.html">SignIn</a></li>
+                    <li><a href="#feedback">Feedback</a></li>
+                    <li><a href="#contact">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 id="cropName">Predicted Crop: </h1>
+
+        <div class="image-container">
+            <img id="cropImage" alt="Crop Image" style="width: 300px; height: 200px;">
+        </div>
+
+        <div class="details">
+            <h2>Watering Details</h2>
+            <p id="wateringDetails"></p>
+
+            <h2>Fertilizer Details</h2>
+            <p id="fertilizerDetails"></p>
+
+            <h2>Manuring Details</h2>
+            <p id="manuringDetails"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <p>&copy; Copyright by Innovative Thinkers</p>
+            <p>Since 2021</p>
+        </div>
+    </footer>
+
+    <script>
+        // Retrieve the crop data from localStorage
+        const predictedCrop = localStorage.getItem('predictedCrop');
+        const cropName = document.getElementById('cropName');
+        const cropImage = document.getElementById('cropImage');
+        const wateringDetails = document.getElementById('wateringDetails');
+        const fertilizerDetails = document.getElementById('fertilizerDetails');
+        const manuringDetails = document.getElementById('manuringDetails');
+
+        // Display crop details dynamically
+        cropName.innerText = `Predicted Crop: ${predictedCrop}`;
+
+        if (predictedCrop === "Maize") {
+            cropImage.src = "../HOME/images/crop2.jpg";
+            wateringDetails.innerText = "Maize requires moderate watering, keep the soil moist, especially during germination.";
+            fertilizerDetails.innerText = "Use balanced fertilizers during sowing and early growth stages.";
+            manuringDetails.innerText = "Incorporate organic compost or manure before planting.";
+        } else if (predictedCrop === "Groundnut") {
+            cropImage.src = "../HOME/images/crop4.jpg";
+            wateringDetails.innerText = "Groundnut requires moderate water. Avoid waterlogging.";
+            fertilizerDetails.innerText = "Apply phosphorus-rich fertilizers at sowing time.";
+            manuringDetails.innerText = "Use organic compost to improve soil health.";
+        } else if (predictedCrop === "Jowar") {
+            cropImage.src = "../HOME/images/crop3.jpg";
+            wateringDetails.innerText = "Jowar requires moderate water. Water the crop 2-3 times a week.";
+            fertilizerDetails.innerText = "Apply nitrogen and phosphorus-rich fertilizers to promote growth.";
+            manuringDetails.innerText = "Organic manures can be added to improve soil fertility.";
+        } else if (predictedCrop === "Chili") {
+            cropImage.src = "../HOME/images/crop5.jpg";
+            wateringDetails.innerText = "Chili requires moderate watering. Avoid overwatering.";
+            fertilizerDetails.innerText = "Use balanced fertilizers with more potassium.";
+            manuringDetails.innerText = "Manure rich in nitrogen can be beneficial during early growth.";
+        } else if (predictedCrop === "Cotton") {
+            cropImage.src = "../HOME/images/crop6.jpg";
+            wateringDetails.innerText = "Cotton needs regular watering but should not be waterlogged.";
+            fertilizerDetails.innerText = "Cotton thrives on balanced fertilizers with higher potassium content.";
+            manuringDetails.innerText = "Adding compost can help enhance soil health for cotton.";
+        } else {
+            cropImage.src = "../HOME/images/default.jpg";
+            wateringDetails.innerText = "No watering details available.";
+            fertilizerDetails.innerText = "No fertilizer details available.";
+            manuringDetails.innerText = "No manuring details available.";
+        }
+    </script>
+</body>
+</html>
